@@ -1,0 +1,78 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0; /* Removed extra space between elements */
+  width: 100%;
+  max-width: 400px;
+  padding: 1.25rem; /* Keep consistent padding */
+  border: 1px solid #e0e0e0;
+  border-radius: 0.75rem;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  margin: 15px;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #034752;
+  margin-bottom: 0.25rem; /* Tightened spacing */
+}
+
+.card-description {
+  color: #6b7280;
+  font-size: 0.9rem;
+  line-height: 1.2; /* Tightened text line spacing */
+  margin-bottom: 0.25rem; /* Tightened spacing */
+}
+
+.card-status {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--status-color, #666);
+  margin-bottom: 0.25rem; /* Tightened spacing */
+}
+
+.card-actions {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.card-actions button {
+  font-size: 0.85rem;
+  padding: 5px 12px;
+  border-radius: 5px;
+  background: none;
+  color: red; /* Changed text to red */
+  border: none;
+  cursor: pointer;
+}
+
+.card-actions button:hover {
+  text-decoration: underline; /* Added hover effect for emphasis */
+  transform: none; /* Removed scaling on hover for better UX */
+}
+
+@media (max-width: 600px) {
+  .card {
+    padding: 1rem; /* Consistent padding for smaller screens */
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+  }
+
+  .card-description {
+    font-size: 0.9rem;
+  }
+}

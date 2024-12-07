@@ -1,0 +1,200 @@
+/* General container styles */
+.login-container {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7fafc;
+  overflow: auto; /* Ensures the SVG doesn't overflow */
+}
+
+/* SVG Background */
+.svg-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* SVG stays in the background */
+  object-fit: cover;
+}
+
+/* Foreground content: Form and image */
+.content-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  z-index: 1; /* Form and image stay on top */
+}
+
+/* Left side: Form styles */
+.form-left {
+  top: 0;
+  width: 40%;
+  max-width: 600px;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.login-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #4a5568;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.login-subtitle {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #078300;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.input-label {
+  text-align: left;
+  color: #2c2c2c;
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  outline: none;
+}
+
+.input-field:focus {
+  border-color: #78c2ad;
+  box-shadow: 0 0 0 1px rgba(7, 131, 0, 0.5);
+}
+
+.submit-btn {
+  width: auto;
+  min-width: 150px;
+  padding: 0.75rem;
+  background-color: #0bae02;
+  color: white;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  transition:
+    background-color 0.3s,
+    transform 0.3s;
+  margin-top: 1rem;
+  text-align: center;
+  margin-bottom: 0.8rem;
+}
+
+.submit-btn:hover {
+  background-color: #078300;
+}
+
+.submit-btn:active {
+  transform: scale(0.95);
+}
+
+/* Right side: Image styles */
+.form-right {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-image {
+  max-width: 90%;
+  height: auto;
+  object-fit: contain;
+}
+.error-text {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 0.25rem; /* Ensures it stays close to the input field */
+  margin-bottom: 0; /* No extra padding below the error */
+}
+
+.register-text {
+  text-align: center;
+}
+.register-link {
+  text-decoration: underline;
+  color: blue;
+}
+.register-link:hover {
+  color: #045200;
+  cursor: pointer;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 1024px) {
+  .login-container {
+    height: 100%;
+  }
+  .content-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form-left {
+    width: 100%;
+    max-width: 700px;
+    margin-bottom: 2rem;
+    background-color: transparent; /* No background for smaller screens */
+    box-shadow: none; /* Remove shadow for smaller screens */
+  }
+
+  .form-right {
+    width: 100%;
+  }
+
+  .login-image {
+    max-width: 70%;
+    margin-top: 1rem;
+  }
+
+  .svg-background {
+    display: none; /* Hide SVG for smaller screens */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .login-container {
+    height: 100%;
+  }
+  .login-title {
+    font-size: 2rem;
+  }
+
+  .login-subtitle {
+    font-size: 1rem;
+  }
+
+  .form-left {
+    padding: 1.5rem;
+  }
+
+  .input-field {
+    padding: 0.5rem;
+  }
+
+  .submit-btn {
+    padding: 0.5rem;
+  }
+}

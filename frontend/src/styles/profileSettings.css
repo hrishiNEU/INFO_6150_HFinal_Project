@@ -1,0 +1,170 @@
+.profile-settings-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+  background: linear-gradient(to bottom, #f0f8ff, #d8f7de); /* Gradient background */
+  background-size: cover;
+  min-height: 100vh;
+  overflow: hidden;
+  height: auto;
+}
+
+.settings-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin-top: 20px;
+  flex-direction: column;
+}
+
+.profile-image-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.profile-image-circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  position: relative;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Ensures image stays within the circle */
+}
+
+.profile-image-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fits without distortion */
+}
+
+.edit-icon {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.5); /* Darker background */
+  border-radius: 50%;
+  padding: 7px;
+  cursor: pointer;
+}
+
+.edit-btn {
+  font-size: 25px; /* Increase font size for better visibility */
+  color: #629c7c; /* Color for pencil icon */
+}
+
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.file-input {
+  margin-bottom: 10px;
+}
+
+.buttons-section {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.settings-btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.submit-btn {
+  background-color: #6fa786;
+  color: white;
+  border: none;
+  width: 50%;
+}
+
+.submit-btn:hover {
+  background-color: #e06a4c;
+}
+
+.cancel-btn {
+  background-color: #c6c6c6;
+  color: white;
+  border: none;
+}
+
+.cancel-btn:hover {
+  background-color: #b0b0b0;
+}
+
+.submit-btn:disabled,
+.cancel-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.user-info-section {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.info-item {
+  margin-bottom: 20px;
+}
+
+.info-item label {
+  font-weight: bold;
+  font-size: 18px;
+  color: #555555;
+}
+
+.info-input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #9bbea0;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  color: #333;
+  cursor: not-allowed;
+}
+
+.info-input:focus {
+  border-color: #ff7a59;
+  box-shadow: 0 0 5px rgba(255, 122, 89, 0.5);
+}
+
+.info-input:hover {
+  background-color: #fff;
+}
+
+@media (max-width: 1024px) {
+  .profile-settings-container {
+    height: 100vh;
+    padding: 10px;
+  }
+  .settings-container {
+    width: 90%;
+    margin-top: 0;
+  }
+  .user-info-section {
+    width: 100%;
+  }
+  .profile-image-section {
+    margin-bottom: 15px;
+  }
+}

@@ -1,0 +1,44 @@
+// src/pages/LandingPage.tsx
+import BannerBackground from "../images/home-banner-background.png";
+import BannerImage from "../images/home-banner-image.png";
+import { ChevronRight } from "lucide-react";
+import About from "../components/About";
+import Work from "../components/Work";
+import Testimonial from "../components/Testimonial";
+import Footer from "../components/Footer";
+import "../styles/styling.css";
+import PublicNavbar from "../components/PublicNavbar";
+
+const LandingPage = () => {
+  return (
+    <div className="landing-home-container">
+      <PublicNavbar />
+      <div className="home-banner-container">
+        <div className="home-bannerImage-container">
+          <img src={BannerBackground} alt="" />
+        </div>
+        <div className="home-text-section">
+          <br />
+          <br />
+          <h1 className="primary-heading">
+            Join hands with the People that Share your Hobbies
+          </h1>
+          <p className="primary-text">
+            Sign-in to interact with a community of fellow hobbyists and an
+            eco-system of experts, teachers, suppliers, classes, workshops, and
+            places to practice, participate or perform
+          </p>
+        </div>
+        <div className="home-image-section">
+          <img src={BannerImage} alt="" />
+        </div>
+      </div>
+      <About />
+      <Work />
+      <Testimonial />
+      <Footer />
+    </div>
+  );
+};
+
+export default LandingPage;

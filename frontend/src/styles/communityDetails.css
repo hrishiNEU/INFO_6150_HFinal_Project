@@ -1,0 +1,262 @@
+.community-details-container {
+  width: 100%;
+  padding: 20px;
+  padding-bottom: 0;
+  background: linear-gradient(to bottom, #f0f8ff, #d8f7de);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+}
+
+.community-image {
+  width: 80%;
+  height: 300px;
+  background-color: #e0e0e0;
+  margin-bottom: 50px; /* Increased from 20px to 40px for more space */
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.community-image-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Style for the edit image icon to appear at the top-right of the image */
+.edit-image-icon {
+  position: absolute;
+  top: 10px; /* Adjust position */
+  right: 10px; /* Adjust position */
+  font-size: 24px;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 5px;
+  border-radius: 50%;
+  z-index: 10; /* Ensure it appears above other content */
+}
+
+/* Style for the edit image container (file input and buttons) */
+.edit-image-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+/* Style for the image upload input */
+.image-upload-input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Style for the edit buttons (Save and Cancel) */
+.edit-buttons {
+  display: flex;
+  gap: 10px; /* Space between buttons */
+  justify-content: center; /* Center align the buttons */
+}
+
+.edit-buttons .action-btn {
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  width: 6rem;
+}
+
+.edit-buttons .action-btn.save {
+  background-color: #4caf50;
+  color: white;
+}
+
+.edit-buttons .action-btn.cancel {
+  background-color: #f44336;
+  color: white;
+}
+
+.edit-buttons .action-btn:hover {
+  background-color: #f1f1f1;
+}
+
+.community-info {
+  position: relative;
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 10px 20px;
+  border: 1px solid #e0e0e0;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  width: 100%;
+  z-index: 1;
+}
+.community-info h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.community-info p {
+  font-size: 18px;
+  color: #6c757d;
+  line-height: 1.6;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.members-sections {
+  margin: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+}
+.members-section.pending-section > p {
+  text-align: center;
+}
+.members-section.approved-section > p {
+  text-align: center;
+}
+.members-section {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+}
+
+.community-heading {
+  font-size: 30px;
+  font-weight: bold;
+  color: #424242;
+  margin-bottom: 10px;
+  text-align: left;
+  margin-left: 0;
+  text-align: center;
+}
+
+.members-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.member-card {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.member-card .member-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.member-card .member-info {
+  flex-grow: 1;
+}
+
+.member-card h3 {
+  font-size: 18px;
+  margin: 0;
+  color: #333;
+}
+
+.member-card p {
+  font-size: 14px;
+  color: #777;
+}
+
+.member-card button {
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+  transition: background-color 0.3s;
+}
+
+.member-card button:hover {
+  background-color: #f1f1f1;
+}
+
+.action-btn.approve {
+  background-color: #4caf50;
+  color: white;
+}
+
+.action-btn.reject {
+  background-color: #f44336;
+  color: white;
+}
+
+.action-btn.remove {
+  background-color: #ff9800;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .community-details-container {
+    padding: 10px; /* Reduce padding for smaller screens */
+    height: max-content;
+  }
+
+  .community-image {
+    width: 100%; /* Full width on small screens */
+    height: 250px; /* Adjust height */
+  }
+
+  .community-info {
+    padding: 15px;
+    max-width: 90%;
+    box-shadow: none;
+  }
+  .members-sections {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .members-section {
+    width: 100%;
+  }
+
+  .community-info h1 {
+    font-size: 28px;
+  }
+
+  .community-info p {
+    font-size: 16px;
+  }
+
+  .member-card {
+    width: 100%;
+  }
+}

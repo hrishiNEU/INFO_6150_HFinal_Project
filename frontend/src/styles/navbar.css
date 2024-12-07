@@ -1,0 +1,87 @@
+/* Navbar Styles */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #78c2ad; /* Light teal background */
+  padding: 5px 30px;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-left h1 {
+  color: #2c3e50; /* Darker text color for better contrast */
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.profile-container {
+  position: relative;
+  margin-top: 0 !important;
+}
+
+.profile-image {
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 50%;
+  background-color: #2c3e50;
+  border: 2px solid #fff;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+
+.profile-image-img {
+  width: 100%; /* Ensure it fills the container */
+  height: 100%; /* Ensure it fills the container */
+  border-radius: 50%; /* Keep the circular shape */
+  object-fit: cover; /* Ensure the image doesn't stretch */
+}
+
+.profile-popup {
+  position: absolute;
+  top: 50px; /* Position it below the profile image */
+  right: 0;
+  background-color: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 150px;
+}
+
+.profile-popup ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.profile-popup ul li {
+  padding: 8px 0;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #2c3e50; /* Dark color for better readability */
+}
+
+.profile-popup ul li:hover {
+  color: #78c2ad; /* Highlight color when hovering */
+}
+
+/* Optional: Add a color to the profile icon */
+.profile-image svg {
+  color: #fff; /* Dark icon color */
+}
+
+
+.profile-image:hover {
+  background-color: #2c3e50;
+  border-color: #3d6852; 
+}
