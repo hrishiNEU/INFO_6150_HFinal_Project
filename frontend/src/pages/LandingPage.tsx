@@ -1,7 +1,6 @@
 // src/pages/LandingPage.tsx
 import BannerBackground from "../images/home-banner-background.png";
 import BannerImage from "../images/home-banner-image.png";
-import { ChevronRight } from "lucide-react";
 import About from "../components/About";
 import Work from "../components/Work";
 import Testimonial from "../components/Testimonial";
