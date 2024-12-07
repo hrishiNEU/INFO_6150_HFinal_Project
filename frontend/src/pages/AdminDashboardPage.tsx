@@ -8,7 +8,7 @@ const fetchAdminDashboardData = async () => {
 };
 
 const AdminDashboardPage = () => {
-  const { isPending, isError, data, error } = useQuery({
+  const { isPending, isError, data } = useQuery({
     queryKey: ["admin-dashboard"],
     queryFn: fetchAdminDashboardData,
   });
