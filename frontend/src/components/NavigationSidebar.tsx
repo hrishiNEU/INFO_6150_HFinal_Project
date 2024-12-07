@@ -9,7 +9,6 @@ import {
   Calendar,
 } from "lucide-react";
 import { useSelector, useDispatch } from "react-redux";
-import { RootState } from "../redux/store";
 import { logout } from "../redux/authSlice";
 import Avatar from "@mui/material/Avatar";
 import IconButton from "@mui/material/IconButton";
