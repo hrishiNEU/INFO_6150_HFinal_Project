@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { Grid } from "@mui/material";
 import axios from "axios";
 import { EventCard } from "../components/EventCard";
 import { useSelector } from "react-redux";
