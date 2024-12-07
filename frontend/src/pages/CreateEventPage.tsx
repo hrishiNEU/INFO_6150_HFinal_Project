@@ -20,6 +20,8 @@ const CreateEventPage = () => {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState<string>("");
 
+  setStatus("CheckedIn");
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!location || !resource || !address || !start || !end) {
