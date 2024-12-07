@@ -57,7 +57,7 @@ const EventsUser = () => {
     onSuccess: (data) => {
       // Invalidate events query to refetch the latest data
       queryClient.invalidateQueries({ queryKey: ["events"] });
-
+      console.log(data);
       // Optionally, manually update the events state to reflect the RSVP
       setSuccessMessage("Successfully RSVP'd to the event");
 
